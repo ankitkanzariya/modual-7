@@ -1,1 +1,1 @@
-# modual-7
+WD JavaScript Essentials And React -Advanced
