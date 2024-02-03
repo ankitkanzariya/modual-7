@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module (JAVASCRIPT BASIC & DOM) – 4</title>
+    <style>
+        #q{
+            background-color: rgb(240, 203, 157);
+            font-size: 20px;
+            color: rgb(77, 0, 150);
+            font-style:inherit;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>java-script assignment</h1>
+
+    <p  id="q">Q1-  What is JavaScript. How to use it?</p>
+    <p>ANS: JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. <br>JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.</p>
+    <p id="q">Q2- How many type of Variable in JavaScript?</p>
+    <p>ANS: Variables can be used to store data in a program, such as strings, numbers, JSON objects, or boolean values. In JavaScript, there are three different variable types: var , let , and const . Each of these variables have several rules around how they should be used, and have different characteristics <ul><li>let</li>
+    <li>var</li>
+    <li>const</li></ul></p>
+        <p id="q">Q3- Define a Data Types in js?</p>
+    <p>ANS: Data types describe the different types or kinds of data that we're gonna be working with and storing in variables. In Javascript, there are five basic, or primitive, types of data. The five most basic types of data are strings, numbers, booleans, undefined, and null.</p> <img src="Datatyp.png" alt="" width="500px">
+
+    <p id="q">Q4- Write a mul Function Which will Work Properly When invoked With Following Syntax.</p>
+
+    <p>ANS: <li>The MUL function is a miniature of the multiplication function. In this function, we call the function that required an argument as a first number, and that function calls another function that required another argument and this step goes on. 
+    </li>
+        <li>The first function’s argument is x, the second function`s argument is y and the third is z, so the return value will be xyz.</li></p>
+        <pre>function mul(x) {
+            return function (y) {
+              return function (z) {
+                return x * y * z;
+              };
+            };
+          }</pre>
+
+<p id="q">Q5-What the deference between undefined and undeclare in JavaScript?</p>
+<p>ANS: <li>Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a keyword. </li>
+<li>Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword</li></p>
+
+<p id="q">Q6- Using console.log() print out the following statement: The quote 'There is no exercise
+    better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
+    help one another. Using console.log() print out the following quote by Mother Teresa</p>
+<p>ANS:    </p>
+
+<p id="q">Q7- Check if typeof '10' is exactly equal to 10. If not make it exactly equal</p>
+<p>ANS:  <pre>
+  
+        let a = 17;
+        let b = 'ankit';
+        let c;
+        let d = null;
+        let e = true;
+        let f = BigInt(58);
+        let g = Symbol("kunal");
+
+        console.log(a,b,c,d,e,f,g);
+        
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+        console.log(typeof f);
+        console.log(typeof g);     
+   
+</pre> </p>
+
+<p id="q">Q8 Write a JavaScript Program to find the area of a triangle?</p>
+<p>ANS: <pre>
+    function calculateTriangleArea(side1, side2, side3) {
+        // Check if a triangle can be formed with the given sides
+        if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
+          return "Invalid triangle sides";
+        }
+      
+        const semiPerimeter = (side1 + side2 + side3) / 2;
+        const area = Math.sqrt(semiPerimeter * (semiPerimeter - side1) * (semiPerimeter - side2) * (semiPerimeter - side3));
+        return area;
+      }
+      
+      const sideA = 5;
+      const sideB = 6;
+      const sideC = 7;
+      const triangleArea = calculateTriangleArea(sideA, sideB, sideC);
+      console.log("Area of triangle:", triangleArea);
+      
+     </pre>
+
+
+    <p id="q">Q9- Write a JavaScript program to calculate days left until next Christmas? </p>
+    <p>ANS: <pre>
+      
+         let today = new Date();
+        let christmasYear = today.getFullYear();
+        
+        if (today.getMonth() == 11 && today.getDate() > 25) {
+          christmasYear = christmasYear + 1;
+        }
+        
+        let christmasDate = new Date(christmasYear, 11, 25);
+        let dayMilliseconds = 1000 * 60 * 60 * 24;
+        
+        let remainingDays = Math.ceil(
+          (christmasDate.getTime() - today.getTime()) /
+           (dayMilliseconds)
+        );      
+    </pre> </p>
+    
+    <p id="q">Q10- What is Condition Statement? </p>
+    <p>ANS: Conditional statements, expressions, or simply conditionals are features of programming languages that tell the computer to execute certain actions, provided ...</p> <img src="condition.webp" width="500" alt="">
+    
+    <p id="q">Q11-  Find circumference of Rectangle formula : C = 4 * a ?</p>
+
+    <p>ANS: 
+        <pre>
+           
+                // Function to calculate the circumference of a rectangle
+            function calculateRectangleCircumference(length, width) {
+              return 2 * (length + width);
+            }
+            
+            // Example 
+            var length = 8; // Replace with the actual length of the rectangle
+            var width = 3;  // Replace with the actual width of the rectangle
+            
+            var circumference = calculateRectangleCircumference(length, width);
+            console.log("Circumference of the rectangle:", circumference);
+            
+           
+        </pre>
+    </p>
+
+    <p id="q">Q12- WAP to convert years into days and days into years? </p>
+    <p>ANS: 
+        <pre>
+            function convert() {
+                const years = parseInt(document.getElementById("years").value);
+                const days = parseInt(document.getElementById("days").value);
+              
+                let result = "";
+              
+                if (!isNaN(years)) {
+                  daysInYear = 365; // Assuming non-leap year
+                  result += years + " years is equal to " + (years * daysInYear) + " days.";
+                } else if (!isNaN(days)) {
+                  result += days + " days is equal to " + Math.floor(days / daysInYear) + " years and " + (days % daysInYear) + " days.";
+                } else {
+                  result = "Please enter a valid number of years or days.";
+                }
+              
+                document.getElementById("result").innerHTML = result;
+              }
+        </pre>
+    </p>
+
+</body>
+</html>
